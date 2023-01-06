@@ -25,14 +25,7 @@ def frenchToEnglish():
 
 @app.route("/")
 def renderIndexPage():
-    # Write the code to render template
-    authenticator = IAMAuthenticator('8hd5Nw2PVGkJyUYHfiG3s-oU8zHSyuxNIhhVamCttHgQ')
-    language_translator = LanguageTranslatorV3(
-    version='2018-05-01',
-    authenticator=authenticator
-    )
-
-language_translator.set_service_url('https://api.us-south.language-tr
+    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
